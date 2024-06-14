@@ -1,0 +1,20 @@
+$(document).ready(function(){
+    // Aquí puedes agregar funciones personalizadas con jQuery
+
+    // Ejemplo de carga de noticias dinámicamente
+    const news = [
+        { title: "Nueva campaña de prevención del dengue", date: "2024-05-10", content: "Detalles sobre la nueva campaña de prevención del dengue..." },
+        { title: "Aumento de casos de dengue en la región", date: "2024-04-25", content: "El número de casos de dengue ha aumentado en las últimas semanas..." }
+    ];
+
+    let newsContainer = $('#news-container');
+    news.forEach(item => {
+        let newsItem = `<div class="news-item">
+            <h3>${item.title}</h3>
+            <p><small>${item.date}</small></p>
+            <p>${item.content}</p>
+        </div>`;
+        newsContainer.append(newsItem);
+    });
+});
+
